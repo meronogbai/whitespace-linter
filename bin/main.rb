@@ -31,7 +31,7 @@ unless extra_empty_lines.empty?
   puts
 end
 
-unless extra_empty_lines.empty? && extra_empty_lines.empty?
+unless extra_whitespace.empty? && extra_empty_lines.empty?
   loop do
     puts 'Do you want to autoformat your file? y/n'
     format_prompt = $stdin.gets.chomp.downcase
