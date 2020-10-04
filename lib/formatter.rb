@@ -3,7 +3,6 @@ class Formatter
     @file = file
     @temp = []
     temp_file
-    p @temp
   end
 
   private
@@ -17,11 +16,11 @@ class Formatter
 
   def whitespace_remover
     @temp.each_with_index do |line, index|
-      if line.end_with?("\n")
-        @temp[index] = line.gsub(/\s+\n$/, "\n")
-      else
-        @temp[index] = line.gsub(/\s+$/, "")
-      end
+      @temp[index] = if line.end_with?("\n")
+                       line.gsub(/\s+\n$/, "\n")
+                     else
+                       line.gsub(/\s+$/, '')
+                     end
     end
   end
 
@@ -39,6 +38,6 @@ class Formatter
     whitespace_remover
     empty_line_remover
     @new_file = File.open(@file, 'w')
-    @new_file.write(@temp.join())
+    @new_file.write(@temp.join)
   end
 end

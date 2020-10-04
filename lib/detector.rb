@@ -6,7 +6,7 @@ class Detector
   def detect_whitespace
     result = {}
     @file.each_with_index do |line, index|
-      result[index + 1] = line if line.end_with?(" \n") || line.end_with?(" ")
+      result[index + 1] = line if line.end_with?(" \n") || line.end_with?(' ')
     end
     result
   end
