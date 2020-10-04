@@ -1,10 +1,4 @@
-test testtest testtest testtest testtest testtest test     
+print 'Hello world'      
 
 
-
-
-
-
-test testtest testtest testtest testtest test    
-
-test testtest testtest testtest testtest testtest testtest test
+print 'Good bye'  
