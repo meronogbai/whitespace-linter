@@ -1,11 +1,13 @@
 #! /usr/bin/env ruby
-
+require 'colorize'
 require_relative '../lib/detector'
 require_relative '../lib/formatter'
 
 file_lint = Detector.new(ARGV[0])
 
 extra_whitespace = file_lint.detect_whitespace
+extra_empty_lines = file_lint.detect_empty
+
 unless extra_whitespace.empty?
   puts
   puts '....................................................'
@@ -13,11 +15,9 @@ unless extra_whitespace.empty?
   puts 'The following lines have extra trailing whitespace.'
   puts
   extra_whitespace.each do |num, line|
-    print "#{num} #{line}"
+    print "#{num} #{line}".red
   end
 end
-
-extra_empty_lines = file_lint.detect_empty
 unless extra_empty_lines.empty?
   puts
   puts '....................................................'
@@ -25,7 +25,7 @@ unless extra_empty_lines.empty?
   puts 'The following empty lines are duplicate.'
   puts
   extra_empty_lines.each do |num, line|
-    print "#{num} #{line}"
+    print "#{num} #{line}".red
   end
 end
 
@@ -46,3 +46,5 @@ unless extra_empty_lines.empty? && extra_empty_lines.empty?
     end
   end
 end
+
+puts 'No whitespace errors'.green if extra_empty_lines.empty? && extra_empty_lines.empty?
