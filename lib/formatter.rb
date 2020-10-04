@@ -39,5 +39,6 @@ class Formatter
     empty_line_remover
     @new_file = File.open(@file, 'w')
     @new_file.write(@temp.join)
+    @temp
   end
 end

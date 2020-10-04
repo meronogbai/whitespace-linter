@@ -27,6 +27,8 @@ unless extra_empty_lines.empty?
   extra_empty_lines.each do |num, line|
     print "#{num} #{line}".red
   end
+  puts '....................................................'
+  puts
 end
 
 unless extra_empty_lines.empty? && extra_empty_lines.empty?
