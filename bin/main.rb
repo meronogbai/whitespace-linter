@@ -49,4 +49,4 @@ unless extra_empty_lines.empty? && extra_empty_lines.empty?
   end
 end
 
-puts 'No whitespace errors'.green if extra_empty_lines.empty? && extra_empty_lines.empty?
+puts 'No whitespace errors'.green if extra_empty_lines.empty? && extra_whitespace.empty?
