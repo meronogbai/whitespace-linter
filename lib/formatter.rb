@@ -1,4 +1,4 @@
-class Format
+class Formatter
   def initialize(file)
     @file = file
     @temp = []
@@ -28,18 +28,17 @@ class Format
   def empty_line_remover
     result = []
     @temp.each_with_index do |line, index|
-      @result << line unless @temp[index - 1] == "\n" && line == "\n"
+      result << line unless @temp[index - 1] == "\n" && line == "\n"
     end
-    result
+    @temp = result
   end
 
   public
 
   def format
-    # @new_file = File.open(@file, 'w')
     whitespace_remover
-    p @temp
-    # empty_line_remover
-    # @new_file.write(@temp.join)
+    empty_line_remover
+    @new_file = File.open(@file, 'w')
+    @new_file.write(@temp.join())
   end
 end
