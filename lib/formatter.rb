@@ -5,6 +5,14 @@ class Formatter
     temp_file
   end
 
+  def format
+    whitespace_remover
+    empty_line_remover
+    @new_file = File.open(@file, 'w')
+    @new_file.write(@temp.join)
+    @temp
+  end
+
   private
 
   def temp_file
@@ -30,15 +38,5 @@ class Formatter
       result << line unless @temp[index - 1] == "\n" && line == "\n"
     end
     @temp = result
-  end
-
-  public
-
-  def format
-    whitespace_remover
-    empty_line_remover
-    @new_file = File.open(@file, 'w')
-    @new_file.write(@temp.join)
-    @temp
   end
 end
