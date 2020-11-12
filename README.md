@@ -48,7 +48,7 @@ To get a local copy up and running follow these simple steps.
 
 - Github: [@meronokbay](https://github.com/meronokbay)
 - Twitter: [@MeronDev](https://twitter.com/MeronDev)
-- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai-467414198/)
+- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai/)
 
 ## 🤝 Contributing
 
