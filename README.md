@@ -19,28 +19,17 @@ This linter is built using Ruby and implements OOP to detect and format whitespa
 
 ![screenshot](./screenshots/good-code.png)
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
+## Prerequisites
 
 - Ruby
-- Git
 
-### Install
+## Install
 
-- Clone the repo to your local machine using git.
-- Navigate to the projects directory.
-- Execute `bundle install` to install the necessary gems (dependencies).
+Execute `gem install ws_lint` to install the linter.
 
-### Usage
+## Usage
 
-- Execute `bin/main.rb /path/to/file` to lint the file that contains your code.
-
-### Run tests
-
-- Execute `rspec` to run the unit tests.
+Execute `ws_lint /path/to/file` to lint the file that contains your code.
 
 ## Author
 
@@ -48,7 +37,7 @@ To get a local copy up and running follow these simple steps.
 
 - Github: [@meronokbay](https://github.com/meronokbay)
 - Twitter: [@MeronDev](https://twitter.com/MeronDev)
-- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai-467414198/)
+- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai/)
 
 ## 🤝 Contributing
 
