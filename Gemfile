@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'colorize'
+gem 'colorize', '~> 0.8.1'
 gem 'rspec'
