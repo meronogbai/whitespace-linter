@@ -2,7 +2,10 @@
 
 > Basic linter that detects and formats trailing whitespace and extra empty lines.
 
-This linter is built using Ruby and implements OOP to detect and format whitespace and empty lines in your code.
+## Features
+
+- Detects excessive whitespace in your file.
+- Allows you to fix detected errors.
 
 ## Built With
 
@@ -19,36 +22,34 @@ This linter is built using Ruby and implements OOP to detect and format whitespa
 
 ![screenshot](./screenshots/good-code.png)
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
+## Prerequisites
 
 - Ruby
-- Git
 
-### Install
+## Install
 
-- Clone the repo to your local machine using git.
-- Navigate to the projects directory.
-- Execute `bundle install` to install the necessary gems (dependencies).
+```bash
+gem install ws_lint
+```
 
-### Usage
+## Usage
 
-- Execute `bin/main.rb /path/to/file` to lint the file that contains your code.
+```bash
+ws_lint /path/to/file
+```
 
-### Run tests
+## Testing
 
-- Execute `rspec` to run the unit tests.
-
+```bash
+bundle exec rspec
+```
 ## Author
 
 👤 **Meron Ogbai**
 
 - Github: [@meronokbay](https://github.com/meronokbay)
 - Twitter: [@MeronDev](https://twitter.com/MeronDev)
-- Linkedin: [linkedin](https://linkedin.com/in/meron-ogbai/)
+- Linkedin: [Meron Ogbai](https://linkedin.com/in/meron-ogbai/)
 
 ## 🤝 Contributing
 
